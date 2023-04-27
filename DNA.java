@@ -3,7 +3,9 @@ public class DNA {
     public static void proteina(String dna){
         dna.toUpperCase();
         int codoninicio =  dna.indexOf("ATG");
-        int codonfinal = dna.indexOf("TGA");
+        int f = dna.length()-3;
+        String dnaf = dna.substring(f);
+        int codonfinal = dnaf.indexOf("TGA");
         if(dna.length()%3==0&&codonfinal%3==0){
             if(codoninicio==0){
             System.out.println("sequencia de DNA completo  "+dna);
